@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">aiscope</title>
+  <desc id="desc">Blueprint-style cover for a local deterministic auditor of AI coding instruction files.</desc>
+  <rect width="1200" height="630" fill="#DDEAF0"/>
+  <rect x="28" y="28" width="1144" height="574" fill="none" stroke="#15242B" stroke-width="2"/>
+  <rect x="28" y="28" width="112" height="574" fill="#15242B"/>
+  <text x="84" y="90" fill="#DDEAF0" font-family="Courier New, monospace" font-size="18" font-weight="700" text-anchor="middle" letter-spacing="3">AIS</text>
+  <line x1="84" y1="126" x2="84" y2="484" stroke="#DDEAF0" stroke-width="1" opacity=".55"/>
+  <text x="84" y="554" fill="#DDEAF0" font-family="Courier New, monospace" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1.5">LOCAL</text>
+
+  <text x="188" y="82" fill="#526771" font-family="Courier New, monospace" font-size="14" font-weight="700" letter-spacing="2">INSTRUCTION AUDIT / 01</text>
+  <text x="188" y="232" fill="#15242B" font-family="Georgia, Times New Roman, serif" font-size="104" font-weight="700" font-style="normal">aiscope</text>
+  <line x1="188" y1="305" x2="1092" y2="305" stroke="#15242B" stroke-width="2"/>
+
+  <text x="188" y="354" fill="#15242B" font-family="Arial, Helvetica, sans-serif" font-size="25">See what your AI coding tools actually remember.</text>
+  <text x="188" y="391" fill="#526771" font-family="Arial, Helvetica, sans-serif" font-size="18">Find stale, conflicting, and scope-mismatched instructions.</text>
+
+  <rect x="188" y="436" width="904" height="72" fill="#15242B"/>
+  <text x="218" y="480" fill="#DDEAF0" font-family="Courier New, monospace" font-size="17">cargo install aiscope  &amp;&amp;  cd my-repo  &amp;&amp;  aiscope</text>
+
+  <text x="188" y="552" fill="#526771" font-family="Courier New, monospace" font-size="13" letter-spacing=".7">CURSOR / CLAUDE CODE / COPILOT / AGENTS.MD</text>
+  <text x="1092" y="552" fill="#15242B" font-family="Courier New, monospace" font-size="13" text-anchor="end">RUST · READ-ONLY</text>
+</svg>

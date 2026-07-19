@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">AIScope icon</title>
+  <desc id="desc">A scoped instruction document with an audit marker.</desc>
+  <rect x="12" y="12" width="232" height="232" rx="54" fill="#DDEAF0" stroke="#15242B" stroke-width="8"/>
+  <rect x="72" y="50" width="112" height="156" rx="10" fill="none" stroke="#15242B" stroke-width="9"/>
+  <path d="M54 92V66a12 12 0 0 1 12-12h18M202 92V66a12 12 0 0 0-12-12h-18M54 164v26a12 12 0 0 0 12 12h18M202 164v26a12 12 0 0 1-12 12h-18" fill="none" stroke="#15242B" stroke-width="9" stroke-linecap="square"/>
+  <path d="M94 88h68M94 116h68M94 144h40" fill="none" stroke="#526771" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="160" cy="160" r="22" fill="#15242B"/>
+  <path d="M160 148v14M160 172h.1" stroke="#DDEAF0" stroke-width="7" stroke-linecap="round"/>
+</svg>

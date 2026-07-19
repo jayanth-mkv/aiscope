@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="720" viewBox="0 0 1400 720" role="img" aria-labelledby="title desc">
+  <title id="title">AIScope architecture</title>
+  <desc id="desc">A six-stage local pipeline discovers AI instruction files, resolves scope, parses and normalizes rules, detects conflicts, and renders results to terminal, CI, JSON, or PNG.</desc>
+  <rect width="1400" height="720" fill="#DDEAF0"/>
+  <rect x="28" y="28" width="1344" height="664" fill="none" stroke="#15242B" stroke-width="3"/>
+  <text x="72" y="92" fill="#526771" font-family="Courier New, monospace" font-size="22" letter-spacing="3">AISCOPE / LOCAL ANALYSIS PIPELINE</text>
+  <text x="72" y="158" fill="#15242B" font-family="Georgia, serif" font-size="54" font-weight="700">Read rules. Resolve scope. Explain conflicts.</text>
+  <line x1="72" y1="194" x2="1328" y2="194" stroke="#9EB0B9" stroke-width="2"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="72" y="286" width="188" height="138" fill="#15242B"/>
+    <text x="166" y="333" fill="#DDEAF0" font-size="23" font-weight="700" text-anchor="middle">Discover</text>
+    <text x="166" y="367" fill="#DDEAF0" font-size="17" text-anchor="middle">Cursor · Claude</text>
+    <text x="166" y="395" fill="#DDEAF0" font-size="17" text-anchor="middle">Copilot · AGENTS</text>
+    <rect x="292" y="286" width="188" height="138" fill="none" stroke="#15242B" stroke-width="3"/>
+    <text x="386" y="333" fill="#15242B" font-size="23" font-weight="700" text-anchor="middle">Resolve scope</text>
+    <text x="386" y="367" fill="#526771" font-size="17" text-anchor="middle">globs · applyTo</text>
+    <text x="386" y="395" fill="#526771" font-size="17" text-anchor="middle">path inheritance</text>
+    <rect x="512" y="286" width="188" height="138" fill="none" stroke="#15242B" stroke-width="3"/>
+    <text x="606" y="333" fill="#15242B" font-size="23" font-weight="700" text-anchor="middle">Parse</text>
+    <text x="606" y="367" fill="#526771" font-size="17" text-anchor="middle">CommonMark AST</text>
+    <text x="606" y="395" fill="#526771" font-size="17" text-anchor="middle">source spans</text>
+    <rect x="732" y="286" width="188" height="138" fill="none" stroke="#15242B" stroke-width="3"/>
+    <text x="826" y="333" fill="#15242B" font-size="23" font-weight="700" text-anchor="middle">Normalize</text>
+    <text x="826" y="367" fill="#526771" font-size="17" text-anchor="middle">canonical text</text>
+    <text x="826" y="395" fill="#526771" font-size="17" text-anchor="middle">pattern extraction</text>
+    <rect x="952" y="286" width="188" height="138" fill="#15242B"/>
+    <text x="1046" y="333" fill="#DDEAF0" font-size="23" font-weight="700" text-anchor="middle">Reason</text>
+    <text x="1046" y="367" fill="#DDEAF0" font-size="17" text-anchor="middle">duplicates · clashes</text>
+    <text x="1046" y="395" fill="#DDEAF0" font-size="17" text-anchor="middle">severity · confidence</text>
+    <rect x="1172" y="286" width="156" height="138" fill="none" stroke="#15242B" stroke-width="3"/>
+    <text x="1250" y="333" fill="#15242B" font-size="23" font-weight="700" text-anchor="middle">Render</text>
+    <text x="1250" y="367" fill="#526771" font-size="17" text-anchor="middle">TUI · CI</text>
+    <text x="1250" y="395" fill="#526771" font-size="17" text-anchor="middle">JSON · PNG</text>
+  </g>
+  <g fill="none" stroke="#15242B" stroke-width="4"><path d="M260 355H292"/><path d="M480 355H512"/><path d="M700 355H732"/><path d="M920 355H952"/><path d="M1140 355H1172"/></g>
+  <g fill="#15242B"><path d="M292 355l-13-8v16Z"/><path d="M512 355l-13-8v16Z"/><path d="M732 355l-13-8v16Z"/><path d="M952 355l-13-8v16Z"/><path d="M1172 355l-13-8v16Z"/></g>
+  <rect x="72" y="504" width="1256" height="76" fill="none" stroke="#526771" stroke-width="2"/>
+  <text x="700" y="551" fill="#15242B" font-family="Courier New, monospace" font-size="20" text-anchor="middle">READ-ONLY · NO NETWORK · NO LLM CALLS · DETERMINISTIC OUTPUT</text>
+  <text x="72" y="632" fill="#526771" font-family="Courier New, monospace" font-size="19">SOURCE FILE → SCOPED STATEMENT → EXPLAINABLE DIAGNOSTIC</text>
+</svg>

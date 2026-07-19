@@ -1,15 +1,51 @@
-# aiscope
+<p align="center">
+  <img src="assets/icon.svg" width="132" alt="AIScope scoped-instruction icon">
+</p>
 
-> **DevTools for your AI coding tools' memory.**
-> See what Cursor, Claude Code, and Copilot actually remember about your project — and where they disagree.
+<h1 align="center">aiscope</h1>
+
+<p align="center">
+  <strong>DevTools for your AI coding tools' memory.</strong><br>
+  See what Cursor, Claude Code, and Copilot actually remember about your project — and where they disagree.
+</p>
+
+<p align="center">
+  <a href="https://crates.io/crates/aiscope"><img alt="Crates.io" src="https://img.shields.io/crates/v/aiscope?style=flat-square"></a>
+  <a href="https://github.com/jayanth-mkv/aiscope/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/jayanth-mkv/aiscope/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-15242B?style=flat-square"></a>
+  <a href="https://jayanth-mkv.github.io/aiscope/"><img alt="Documentation" src="https://img.shields.io/badge/docs-open-526771?style=flat-square"></a>
+</p>
+
+<p align="center">
+  <a href="#what-is-aiscope">What is AIScope?</a> ·
+  <a href="#quick-start">Quick start</a> ·
+  <a href="#features">Features</a> ·
+  <a href="#architecture">Architecture</a> ·
+  <a href="#privacy--safety">Privacy</a> ·
+  <a href="#install">Install</a>
+</p>
+
+<p align="center">
+  <img src="assets/readme-cover.svg" width="92%" alt="AIScope paperback cover: inspect what AI coding tools remember and where their instructions disagree">
+</p>
+
+## What is AIScope?
+
+`aiscope` is a local audit tool for the instruction files used by Cursor, Claude Code, GitHub Copilot, and compatible agent workflows. It discovers rules, prompts, agents, chat modes, and skills, then shows which instructions overlap or conflict.
+
+The analysis is deterministic and read-only: no LLM calls, network requests, telemetry, or account. Results are available as an interactive terminal UI, compiler-style diagnostics, JSON, text, CI exit codes, and a shareable PNG card.
+
+<p align="center">
+  <img src="aiscope-demo.png" width="92%" alt="aiscope terminal audit showing instruction sources and detected conflicts">
+</p>
+
+## Quick start
 
 ```bash
 cargo install aiscope
 cd my-repo
 aiscope
 ```
-
-![aiscope demo card](aiscope-demo.png)
 
 ---
 
@@ -47,7 +83,7 @@ Even if you only use **one** tool, you have rules in 5 places. After six months 
 
 ---
 
-## What it does
+## Features
 
 | Feature                    | Flag                         | What it gives you                                                   |
 | -------------------------- | ---------------------------- | ------------------------------------------------------------------- |
@@ -57,16 +93,20 @@ Even if you only use **one** tool, you have rules in 5 places. After six months 
 | TUI                        | (default)                    | Two-pane terminal app: sources left, conflicts right                |
 | Compiler-grade diagnostics | `--diag`                     | `miette`-style report with byte-precise spans for CI logs           |
 | Token-budget breakdown     | (always)                     | "21% of your context window is stale"                               |
-| Shareable PNG card         | `--card out.png`             | Tweet-bait, blog hero, retro at 1280×720                            |
+| Shareable PNG card         | `--card out.png`             | Portable audit summary for issues, posts, and retrospectives        |
 | CI mode                    | `aiscope check`              | Exits 1 only on **high-severity** conflicts (no flapping)           |
 | Watch mode                 | `aiscope watch`              | Live re-scan on file change                                         |
 | Scriptable                 | `--json`, `--text`, `--grep` | Pipeable into anything                                              |
 
 ---
 
-## How it works
+## Architecture
 
-aiscope is a 6-layer deterministic pipeline. **No LLM calls. No network. ~5 MB binary.**
+<p align="center">
+  <img src="assets/readme-architecture.svg" width="92%" alt="AIScope local architecture from instruction discovery and scope resolution to conflict reasoning and terminal or CI output">
+</p>
+
+AIScope is a six-layer deterministic pipeline. **No LLM calls. No network. ~5 MB binary.**
 
 ```text
 Source files (3 tools × 5 subsystems)
