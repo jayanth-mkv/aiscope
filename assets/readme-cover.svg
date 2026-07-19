@@ -5,13 +5,13 @@
   <rect x="28" y="28" width="1144" height="574" fill="none" stroke="#111A1E" stroke-width="2"/>
   <line x1="62" y1="112" x2="1138" y2="112" stroke="#C9D7DC" stroke-width="2"/>
 
-  <text x="62" y="78" fill="#607D88" font-family="Courier New, monospace" font-size="14" font-weight="700" letter-spacing="2.5">AISCOPE / TECHNICAL DOSSIER 01</text>
+  <text x="62" y="78" fill="#506C77" font-family="Courier New, monospace" font-size="14" font-weight="700" letter-spacing="2.5">AISCOPE / TECHNICAL DOSSIER 01</text>
   <text x="1138" y="78" fill="#111A1E" font-family="Courier New, monospace" font-size="13" text-anchor="end" letter-spacing="1">LOCAL · DETERMINISTIC</text>
 
   <text x="62" y="264" fill="#111A1E" font-family="Georgia, Times New Roman, serif" font-size="108" font-weight="700">aiscope</text>
-  <text x="66" y="313" fill="#607D88" font-family="Courier New, monospace" font-size="16" font-weight="700" letter-spacing="3">INSTRUCTION MEMORY, MADE VISIBLE</text>
+  <text x="66" y="313" fill="#506C77" font-family="Courier New, monospace" font-size="16" font-weight="700" letter-spacing="3">INSTRUCTION MEMORY, MADE VISIBLE</text>
   <text x="66" y="372" fill="#111A1E" font-family="Arial, Helvetica, sans-serif" font-size="24">Audit what your coding agents remember.</text>
-  <text x="66" y="410" fill="#607D88" font-family="Arial, Helvetica, sans-serif" font-size="18">Trace scope, surface conflicts, and keep every finding explainable.</text>
+  <text x="66" y="410" fill="#506C77" font-family="Arial, Helvetica, sans-serif" font-size="18">Trace scope, surface conflicts, and keep every finding explainable.</text>
 
   <g transform="translate(938 290)">
     <circle r="122" fill="#E2EAED" stroke="#607D88" stroke-width="2"/>
@@ -23,5 +23,5 @@
 
   <rect x="62" y="486" width="1076" height="66" fill="#111A1E"/>
   <text x="92" y="527" fill="#F4F7F8" font-family="Courier New, monospace" font-size="17">cargo install aiscope  →  cd my-repo  →  aiscope</text>
-  <text x="1138" y="580" fill="#607D88" font-family="Courier New, monospace" font-size="12" text-anchor="end" letter-spacing="1">CURSOR / CLAUDE CODE / COPILOT / AGENTS.MD</text>
+  <text x="1138" y="580" fill="#506C77" font-family="Courier New, monospace" font-size="12" text-anchor="end" letter-spacing="1">CURSOR / CLAUDE CODE / COPILOT / AGENTS.MD</text>
 </svg>

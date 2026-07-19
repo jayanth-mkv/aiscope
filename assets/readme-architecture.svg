@@ -3,12 +3,12 @@
   <desc id="desc">Instruction sources enter a local scope engine and become explainable diagnostics and machine-readable outputs.</desc>
   <rect width="1400" height="720" fill="#F4F7F8"/>
   <rect x="28" y="28" width="1344" height="664" fill="none" stroke="#111A1E" stroke-width="2"/>
-  <text x="68" y="78" fill="#607D88" font-family="Courier New, monospace" font-size="14" font-weight="700" letter-spacing="2.5">AISCOPE / SYSTEM MAP 01</text>
+  <text x="68" y="78" fill="#506C77" font-family="Courier New, monospace" font-size="14" font-weight="700" letter-spacing="2.5">AISCOPE / SYSTEM MAP 01</text>
   <text x="68" y="142" fill="#111A1E" font-family="Georgia, Times New Roman, serif" font-size="50" font-weight="700">From scattered instructions to scoped evidence.</text>
   <line x1="68" y1="174" x2="1332" y2="174" stroke="#C9D7DC" stroke-width="2"/>
 
-  <text x="68" y="226" fill="#607D88" font-family="Courier New, monospace" font-size="14" font-weight="700" letter-spacing="2">01 / SOURCES</text>
-  <text x="1050" y="226" fill="#607D88" font-family="Courier New, monospace" font-size="14" font-weight="700" letter-spacing="2">03 / OUTPUTS</text>
+  <text x="68" y="226" fill="#506C77" font-family="Courier New, monospace" font-size="14" font-weight="700" letter-spacing="2">01 / SOURCES</text>
+  <text x="1050" y="226" fill="#506C77" font-family="Courier New, monospace" font-size="14" font-weight="700" letter-spacing="2">03 / OUTPUTS</text>
 
   <g font-family="Arial, Helvetica, sans-serif">
     <rect x="68" y="254" width="278" height="236" rx="2" fill="#FFFFFF" stroke="#111A1E" stroke-width="3"/>
@@ -21,7 +21,7 @@
     </g>
 
     <circle cx="700" cy="372" r="166" fill="#E2EAED" stroke="#111A1E" stroke-width="3"/>
-    <text x="700" y="198" fill="#607D88" font-family="Courier New, monospace" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="2">02 / LOCAL SCOPE ENGINE</text>
+    <text x="700" y="198" fill="#506C77" font-family="Courier New, monospace" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="2">02 / LOCAL SCOPE ENGINE</text>
     <circle cx="700" cy="372" r="116" fill="#111A1E"/>
     <text x="700" y="337" fill="#F4F7F8" font-family="Georgia, Times New Roman, serif" font-size="29" font-weight="700" text-anchor="middle">Scope engine</text>
     <text x="700" y="378" fill="#C9D7DC" font-family="Courier New, monospace" font-size="14" text-anchor="middle" letter-spacing="1">PARSE → NORMALIZE</text>
@@ -42,5 +42,5 @@
 
   <rect x="68" y="568" width="1264" height="72" fill="#111A1E"/>
   <text x="700" y="612" fill="#F4F7F8" font-family="Courier New, monospace" font-size="18" text-anchor="middle" letter-spacing="1">READ-ONLY · NO NETWORK · NO LLM CALLS · DETERMINISTIC OUTPUT</text>
-  <text x="68" y="668" fill="#607D88" font-family="Courier New, monospace" font-size="13">EVERY DIAGNOSTIC RETAINS ITS SOURCE AND SCOPE</text>
+  <text x="68" y="668" fill="#506C77" font-family="Courier New, monospace" font-size="13">EVERY DIAGNOSTIC RETAINS ITS SOURCE AND SCOPE</text>
 </svg>
