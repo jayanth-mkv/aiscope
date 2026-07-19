@@ -1,10 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
   <title id="title">AIScope icon</title>
-  <desc id="desc">A scoped instruction document with an audit marker.</desc>
-  <rect x="12" y="12" width="232" height="232" rx="54" fill="#DDEAF0" stroke="#15242B" stroke-width="8"/>
-  <rect x="72" y="50" width="112" height="156" rx="10" fill="none" stroke="#15242B" stroke-width="9"/>
-  <path d="M54 92V66a12 12 0 0 1 12-12h18M202 92V66a12 12 0 0 0-12-12h-18M54 164v26a12 12 0 0 0 12 12h18M202 164v26a12 12 0 0 1-12 12h-18" fill="none" stroke="#15242B" stroke-width="9" stroke-linecap="square"/>
-  <path d="M94 88h68M94 116h68M94 144h40" fill="none" stroke="#526771" stroke-width="8" stroke-linecap="round"/>
-  <circle cx="160" cy="160" r="22" fill="#15242B"/>
-  <path d="M160 148v14M160 172h.1" stroke="#DDEAF0" stroke-width="7" stroke-linecap="round"/>
+  <desc id="desc">A document centered inside a precise audit scope.</desc>
+  <rect x="12" y="12" width="232" height="232" rx="54" fill="#F4F7F8" stroke="#111A1E" stroke-width="8"/>
+  <circle cx="128" cy="128" r="76" fill="#E2EAED" stroke="#607D88" stroke-width="5"/>
+  <path d="M62 96V70a8 8 0 0 1 8-8h26M160 62h26a8 8 0 0 1 8 8v26M194 160v26a8 8 0 0 1-8 8h-26M96 194H70a8 8 0 0 1-8-8v-26" fill="none" stroke="#111A1E" stroke-width="9" stroke-linecap="square"/>
+  <rect x="91" y="72" width="74" height="108" rx="8" fill="#F4F7F8" stroke="#111A1E" stroke-width="8"/>
+  <path d="M108 101h40M108 123h40M108 145h23" fill="none" stroke="#607D88" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="151" cy="151" r="19" fill="#111A1E"/>
+  <path d="M151 140v13M151 162h.1" stroke="#F4F7F8" stroke-width="6" stroke-linecap="round"/>
 </svg>
