@@ -46,6 +46,8 @@ The [AIScope user guide](https://jayanth-mkv.github.io/aiscope/) is the primary 
 
 The [API reference on docs.rs](https://docs.rs/aiscope) documents the published Rust crate. This README is embedded as the docs.rs landing page, so repository visitors and crate users begin from the same project overview.
 
+The user guide tracks supported workflows as they evolve; the README keeps the project purpose and safe local-first model visible from the repository and crate entry points.
+
 ## Quick start
 
 ```bash
