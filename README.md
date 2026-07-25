@@ -5,8 +5,8 @@
 <h1 align="center">aiscope</h1>
 
 <p align="center">
-  <strong>DevTools for your AI coding tools' memory.</strong><br>
-  See what Cursor, Claude Code, and Copilot actually remember about your project — and where they disagree.
+  <strong>Local instruction intelligence for AI coding agents.</strong><br>
+  Inspect the files that guide your tools, find conflicts, and keep project guidance coherent.
 </p>
 
 <p align="center">
@@ -31,7 +31,7 @@
 
 ## What is AIScope?
 
-`aiscope` is a local audit tool for the instruction files used by Cursor, Claude Code, GitHub Copilot, and compatible agent workflows. It discovers rules, prompts, agents, chat modes, and skills, then shows which instructions overlap or conflict.
+`aiscope` is a local audit tool for the instruction files that shape AI coding-agent workflows. It discovers guidance, prompts, agents, interaction modes, and reusable skills, then shows which instructions overlap or conflict.
 
 The analysis is deterministic and read-only: no LLM calls, network requests, telemetry, or account. Results are available as an interactive terminal UI, compiler-style diagnostics, JSON, text, CI exit codes, and a shareable PNG card.
 
