@@ -315,7 +315,7 @@ fn measure(fs: &mut FontSystem, text: &str, size: f32) -> f32 {
     let attrs = Attrs::new().family(Family::Name(FAMILY));
     // Generous fixed bound so cosmic-text doesn't wrap during measurement.
     buf.set_size(fs, Some(W as f32 * 4.0), Some(size * 4.0));
-    buf.set_text(fs, text, attrs, Shaping::Advanced);
+    buf.set_text(fs, text, &attrs, Shaping::Advanced, None);
     buf.shape_until_scroll(fs, false);
     buf.layout_runs().map(|r| r.line_w).fold(0.0_f32, f32::max)
 }
@@ -388,7 +388,7 @@ fn draw(
     let mut buf = Buffer::new(fs, metrics);
     let attrs = Attrs::new().family(Family::Name(FAMILY));
     buf.set_size(fs, Some(W as f32 * 4.0), Some(H as f32 * 4.0));
-    buf.set_text(fs, text, attrs, Shaping::Advanced);
+    buf.set_text(fs, text, &attrs, Shaping::Advanced, None);
     buf.shape_until_scroll(fs, false);
     let color = CosColor::rgb(rgb_c.0, rgb_c.1, rgb_c.2);
     let pw = pixmap.width() as i32;
