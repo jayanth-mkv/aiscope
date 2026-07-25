@@ -13,11 +13,12 @@
   <a href="https://crates.io/crates/aiscope"><img alt="Crates.io" src="https://img.shields.io/crates/v/aiscope?style=flat-square"></a>
   <a href="https://github.com/jayanth-mkv/aiscope/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/jayanth-mkv/aiscope/actions/workflows/ci.yml/badge.svg"></a>
   <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-15242B?style=flat-square"></a>
-  <a href="https://jayanth-mkv.github.io/aiscope/"><img alt="Documentation" src="https://img.shields.io/badge/docs-open-526771?style=flat-square"></a>
+  <a href="https://jayanth-mkv.github.io/aiscope/"><img alt="User guide" src="https://img.shields.io/badge/user%20guide-open-526771?style=flat-square"></a>
 </p>
 
 <p align="center">
   <a href="#what-is-aiscope">What is AIScope?</a> ·
+  <a href="#documentation">Documentation</a> ·
   <a href="#quick-start">Quick start</a> ·
   <a href="#features">Features</a> ·
   <a href="#architecture">Architecture</a> ·
@@ -38,6 +39,12 @@ The analysis is deterministic and read-only: no LLM calls, network requests, tel
 <p align="center">
   <img src="aiscope-demo.png" width="92%" alt="aiscope terminal audit showing instruction sources and detected conflicts">
 </p>
+
+## Documentation
+
+The [AIScope user guide](https://jayanth-mkv.github.io/aiscope/) is the primary documentation for installation, workflows, configuration, and practical usage.
+
+The [API reference on docs.rs](https://docs.rs/aiscope) documents the published Rust crate. This README is embedded as the docs.rs landing page, so repository visitors and crate users begin from the same project overview.
 
 ## Quick start
 
