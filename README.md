@@ -10,6 +10,8 @@
 </p>
 
 <p align="center">
+  <a href="https://www.npmjs.com/package/aiscope-cli"><img alt="npm" src="https://img.shields.io/npm/v/aiscope-cli?style=flat-square"></a>
+  <a href="https://pypi.org/project/aiscope-cli/"><img alt="PyPI" src="https://img.shields.io/pypi/v/aiscope-cli?style=flat-square"></a>
   <a href="https://crates.io/crates/aiscope"><img alt="Crates.io" src="https://img.shields.io/crates/v/aiscope?style=flat-square"></a>
   <a href="https://github.com/jayanth-mkv/aiscope/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/jayanth-mkv/aiscope/actions/workflows/ci.yml/badge.svg"></a>
   <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-15242B?style=flat-square"></a>
@@ -33,9 +35,10 @@ Copy this prompt into your coding agent:
 ```text
 Set up AIScope for this project using https://github.com/Jayanth-MKV/aiscope.
 Read the README and skills/aiscope-setup/SKILL.md from that repository.
-Detect my OS and architecture, reuse an existing installation, or install
-a released binary after checking its SHA-256 checksum. Use Cargo if a
-matching binary is unavailable. Install the aiscope-setup and aiscope
+Detect my OS and architecture and reuse an existing installation. Prefer
+the aiscope-cli npm or PyPI package using an existing package manager;
+otherwise install a released binary after checking SHA-256, or use Cargo.
+Install the aiscope-setup and aiscope
 skills for the agent I am using, scoped to this project. Keep existing
 agent configuration. Verify the version, run a noninteractive JSON scan
 of this project, and explain any high-severity conflicts with file and
