@@ -1,0 +1,24 @@
+[build-system]
+requires = ["maturin>=1.11,<2"]
+build-backend = "maturin"
+
+[project]
+name = "aiscope-cli"
+version = "0.1.2"
+description = "Local audits of AI coding-agent instructions, scopes and conflicts."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Xplormity Collective" }]
+keywords = ["ai", "agent", "instructions", "cli", "claude", "cursor", "copilot", "audit"]
+classifiers = ["Environment :: Console", "Topic :: Software Development :: Quality Assurance", "Programming Language :: Rust"]
+
+[project.urls]
+Homepage = "https://jayanth-mkv.github.io/aiscope/"
+Repository = "https://github.com/jayanth-mkv/aiscope"
+Issues = "https://github.com/jayanth-mkv/aiscope/issues"
+
+[tool.maturin]
+bindings = "bin"
+strip = true
+include = ["skills/**/*", "plugin.json", ".codex-plugin/plugin.json", ".claude-plugin/plugin.json"]

@@ -82,3 +82,8 @@ docs/book/
 # Personal scratch — anything in this folder is yours alone
 .local/
 private/
+
+# Package build output
+/node_modules/
+/dist/
+*.tgz

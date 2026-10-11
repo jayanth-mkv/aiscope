@@ -56,18 +56,17 @@ jobs:
               with:
                   key: ${{ matrix.target }}
 
-            - name: Install cross (linux-aarch64 only)
-              if: matrix.cross
-              run: cargo install cross --locked
+            - uses: actions/setup-python@v6
+              with:
+                  python-version: '3.11'
 
-            - name: Build
-              shell: bash
-              run: |
-                  if [[ "${{ matrix.cross }}" == "true" ]]; then
-                    cross build --release --target ${{ matrix.target }}
-                  else
-                    cargo build --release --target ${{ matrix.target }}
-                  fi
+            - name: Build native binary and Python wheel
+              uses: PyO3/maturin-action@86b9d133d34bc1b40018696f782949dac11bd380 # v1.49.4
+              with:
+                  maturin-version: v1.11.5
+                  target: ${{ matrix.target }}
+                  manylinux: '2_28'
+                  args: --release --locked --compatibility pypi --out wheels
 
             - name: Package
               shell: bash
@@ -77,8 +76,12 @@ jobs:
                   mkdir "$name"
                   if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
                     cp "target/${{ matrix.target }}/release/aiscope.exe" "$name/"
+                    cp "$name/aiscope.exe" "$name.exe"
+                    echo "BINARY=$name.exe" >> "$GITHUB_ENV"
                   else
                     cp "target/${{ matrix.target }}/release/aiscope"     "$name/"
+                    cp "$name/aiscope" "$name.bin"
+                    echo "BINARY=$name.bin" >> "$GITHUB_ENV"
                   fi
                   cp README.md LICENSE CHANGELOG.md "$name/"
                   if [[ "${{ matrix.archive }}" == "zip" ]]; then
@@ -94,8 +97,10 @@ jobs:
               run: |
                   if [[ "${{ matrix.os }}" == "macos-latest" ]]; then
                     shasum -a 256 "$ASSET" > "$ASSET.sha256"
+                    shasum -a 256 "$BINARY" > "$BINARY.sha256"
                   else
                     sha256sum "$ASSET" > "$ASSET.sha256"
+                    sha256sum "$BINARY" > "$BINARY.sha256"
                   fi
 
             - name: Upload artifact
@@ -105,6 +110,14 @@ jobs:
                   path: |
                       ${{ env.ASSET }}
                       ${{ env.ASSET }}.sha256
+                      ${{ env.BINARY }}
+                      ${{ env.BINARY }}.sha256
+
+            - name: Upload Python wheel
+              uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+              with:
+                  name: wheel-${{ matrix.target }}
+                  path: wheels/*.whl
 
     publish:
         name: publish github release
@@ -122,6 +135,15 @@ jobs:
               uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
               with:
                   path: dist
+
+            - uses: actions/setup-node@v6
+              with:
+                  node-version: '24'
+
+            - name: Check npm launcher and package public bundles
+              run: |
+                  npm test
+                  python scripts/prepare_packages.py
 
             - name: Extract release notes from CHANGELOG
               shell: bash
@@ -145,7 +167,49 @@ jobs:
               with:
                   generate_release_notes: true
                   body_path: RELEASE_NOTES.md
-                  files: dist/*/*
+                  files: |
+                      dist/*/*
+                      dist/*.tgz
+                      dist/*.zip
+
+    npm:
+        needs: publish
+        runs-on: ubuntu-latest
+        environment: npm
+        permissions:
+            contents: read
+            id-token: write
+        steps:
+            - uses: actions/checkout@v6
+            - uses: actions/setup-node@v6
+              with:
+                  node-version: '24'
+                  registry-url: https://registry.npmjs.org
+                  package-manager-cache: false
+            - run: npm install --global npm@latest
+            - name: Publish missing npm version
+              shell: bash
+              run: |
+                  VERSION="${GITHUB_REF_NAME#v}"
+                  STATUS=$(curl --silent --output /dev/null --write-out '%{http_code}' "https://registry.npmjs.org/aiscope-cli/$VERSION")
+                  if [ "$STATUS" = "404" ]; then npm publish --access public --provenance; elif [ "$STATUS" != "200" ]; then exit 1; fi
+
+    pypi:
+        needs: publish
+        runs-on: ubuntu-latest
+        environment: pypi
+        permissions:
+            id-token: write
+        steps:
+            - uses: actions/download-artifact@v4
+              with:
+                  pattern: wheel-*
+                  merge-multiple: true
+                  path: wheels
+            - uses: pypa/gh-action-pypi-publish@release/v1
+              with:
+                  packages-dir: wheels/
+                  skip-existing: true
 
     crates-io:
         name: publish crates.io

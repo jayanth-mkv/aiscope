@@ -5,6 +5,11 @@ All notable changes to **aiscope** are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.2]
+
+- Add npm and PyPI installation of the native AIScope CLI.
+- Include project-scoped agent setup and audit skills in public packages and release bundles.
+
 ## [Unreleased]
 
 ## [0.1.1] — 2026-04-27

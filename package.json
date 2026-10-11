@@ -1,0 +1,17 @@
+{
+  "name": "aiscope-cli",
+  "version": "0.1.2",
+  "description": "Audit AI coding agent instructions locally: find conflicts in AGENTS.md, Claude, Cursor and Copilot guidance.",
+  "type": "module",
+  "bin": { "aiscope": "npm/cli.js" },
+  "engines": { "node": ">=22" },
+  "files": ["npm/cli.js", "npm/runtime.js", "skills", "plugin.json", ".codex-plugin/plugin.json", ".claude-plugin/plugin.json", "README.md", "LICENSE"],
+  "scripts": { "test": "node --test npm/*.test.js" },
+  "author": "Xplormity Collective",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/jayanth-mkv/aiscope.git" },
+  "homepage": "https://jayanth-mkv.github.io/aiscope/",
+  "bugs": { "url": "https://github.com/jayanth-mkv/aiscope/issues" },
+  "keywords": ["ai", "coding-agent", "agent-skills", "instructions", "claude", "cursor", "copilot", "cli", "audit", "aiscope"],
+  "publishConfig": { "access": "public" }
+}

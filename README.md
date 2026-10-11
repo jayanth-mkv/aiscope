@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/icon.svg" width="132" alt="AIScope scoped-instruction icon">
+  <img src="https://raw.githubusercontent.com/jayanth-mkv/aiscope/main/assets/icon.svg" width="132" alt="AIScope scoped-instruction icon">
 </p>
 
 <h1 align="center">aiscope</h1>
@@ -44,10 +44,25 @@ line references. Leave instruction files unchanged unless I ask for fixes.
 
 ## Installation commands
 
+With Node.js 22+ (downloads a checksum-verified native binary on first run):
+
+```sh
+npx --yes aiscope-cli@0.1.2 --version
+npx --yes aiscope-cli@0.1.2 --specific --json .
+```
+
+Or install through Python, without Rust or Node.js:
+
+```sh
+uv tool install aiscope-cli==0.1.2
+# Alternatively: pip install aiscope-cli==0.1.2
+aiscope --version
+```
+
 If Rust and Cargo are installed:
 
 ```sh
-cargo install aiscope --version 0.1.1 --locked
+cargo install aiscope --version 0.1.2 --locked
 aiscope --version
 aiscope --specific --json .
 ```
@@ -69,7 +84,7 @@ In Claude Code 2.1.275+, install the plugin and both skills in one step:
 ```
 
 <p align="center">
-  <img src="assets/readme-cover.svg" width="92%" alt="AIScope paperback cover: inspect what AI coding tools remember and where their instructions disagree">
+  <img src="https://raw.githubusercontent.com/jayanth-mkv/aiscope/main/assets/readme-cover.svg" width="92%" alt="AIScope paperback cover: inspect what AI coding tools remember and where their instructions disagree">
 </p>
 
 ## What is AIScope?
@@ -79,7 +94,7 @@ In Claude Code 2.1.275+, install the plugin and both skills in one step:
 The analysis is deterministic and read-only: no LLM calls, network requests, telemetry, or account. Results are available as an interactive terminal UI, compiler-style diagnostics, JSON, text, CI exit codes, and a shareable PNG card.
 
 <p align="center">
-  <img src="aiscope-demo.png" width="92%" alt="aiscope terminal audit showing instruction sources and detected conflicts">
+  <img src="https://raw.githubusercontent.com/jayanth-mkv/aiscope/main/aiscope-demo.png" width="92%" alt="aiscope terminal audit showing instruction sources and detected conflicts">
 </p>
 
 ## Documentation
@@ -154,7 +169,7 @@ Even if you only use **one** tool, you have rules in 5 places. After six months 
 ## Architecture
 
 <p align="center">
-  <img src="assets/readme-architecture.svg" width="92%" alt="AIScope local architecture from instruction discovery and scope resolution to conflict reasoning and terminal or CI output">
+  <img src="https://raw.githubusercontent.com/jayanth-mkv/aiscope/main/assets/readme-architecture.svg" width="92%" alt="AIScope local architecture from instruction discovery and scope resolution to conflict reasoning and terminal or CI output">
 </p>
 
 AIScope is a six-layer deterministic pipeline. **No LLM calls. No network. ~5 MB binary.**
@@ -223,7 +238,7 @@ Two rules with **non-overlapping** `applyTo` globs (e.g. `**/*.ts` vs `**/*.py`)
 cargo install aiscope            # 5 MB self-contained binary
 ```
 
-Prebuilt binaries are available through [GitHub Releases](https://github.com/Jayanth-MKV/aiscope/releases/latest). npm and PyPI launchers are planned; use the supported installation paths above today.
+Prebuilt binaries are available through [GitHub Releases](https://github.com/Jayanth-MKV/aiscope/releases/latest). The npm and PyPI package name is `aiscope-cli`; both expose `aiscope`. npm supports macOS x64/ARM64, glibc Linux x64/ARM64 and Windows x64. Its first launch downloads and verifies SHA-256 for a native binary, then caches it; Python wheels bundle that binary. Audits themselves stay offline. `AISCOPE_CACHE_DIR` changes the npm cache location; `AISCOPE_BINARY_PATH` selects an explicitly trusted existing binary.
 
 ---
 

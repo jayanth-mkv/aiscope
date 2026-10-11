@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "aiscope",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Audit conflicting AI coding instructions with AIScope's native CLI.",
   "author": {
     "name": "Xplormity Collective"
