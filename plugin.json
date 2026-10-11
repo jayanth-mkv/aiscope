@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "aiscope",
+  "version": "0.1.1",
+  "description": "Audit conflicting AI coding instructions with AIScope's native CLI.",
+  "author": {
+    "name": "Xplormity Collective"
+  },
+  "homepage": "https://github.com/Jayanth-MKV/aiscope",
+  "repository": "https://github.com/Jayanth-MKV/aiscope",
+  "license": "MIT",
+  "keywords": [
+    "ai-coding",
+    "instructions",
+    "cli",
+    "agent-skills"
+  ],
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/aiscope-setup/SKILL.md"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "aiscope",
+  "description": "AIScope setup and AI coding instruction audit skills.",
+  "owner": {
+    "name": "Xplormity Collective"
+  },
+  "plugins": [
+    {
+      "name": "aiscope",
+      "source": "./",
+      "description": "Audit conflicting AI coding instructions with AIScope's native CLI."
+    }
+  ]
+}

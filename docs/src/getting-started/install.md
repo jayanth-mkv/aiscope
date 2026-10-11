@@ -2,10 +2,10 @@
 
 aiscope is a single Rust binary with **zero runtime dependencies**.
 
-## From source (recommended for now)
+## With Cargo
 
 ```bash
-cargo install --git https://github.com/Jayanth-MKV/aiscope
+cargo install aiscope --version 0.1.1 --locked
 ```
 
 Cargo drops the `aiscope` binary into `~/.cargo/bin/`, which is on your PATH
@@ -36,16 +36,14 @@ on your PATH.
 Each archive ships with a `.sha256` file — verify before running:
 
 ```bash
-sha256sum -c aiscope-v0.1.0-x86_64-unknown-linux-gnu.tar.gz.sha256
+sha256sum -c aiscope-v0.1.1-x86_64-unknown-linux-gnu.tar.gz.sha256
 ```
 
-## crates.io
+On macOS, use `shasum -a 256 <archive>` and compare the hash with the checksum file. On Windows, use `Get-FileHash -Algorithm SHA256 <archive>`. Verify before extracting or executing the binary.
 
-Once published, you'll be able to:
+## Agent skills and plugins
 
-```bash
-cargo install aiscope
-```
+Use the [agent setup guide](agents.md) to install the setup and audit skills or a Codex/Claude Code plugin. Skills do not replace the CLI installation. npm and PyPI launchers are planned; the npm package named `aiscope` belongs to a different project.
 
 ## Build requirements
 

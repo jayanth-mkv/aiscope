@@ -1,0 +1,14 @@
+{
+  "name": "aiscope",
+  "version": "0.1.1",
+  "description": "Audit conflicting AI coding instructions with AIScope's native CLI.",
+  "author": {
+    "name": "Xplormity Collective"
+  },
+  "skills": "./skills/",
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/aiscope-setup/SKILL.md"
+    }
+  }
+}

@@ -5,6 +5,7 @@
 # Getting started
 
 - [Install](./getting-started/install.md)
+- [Agent skills and plugins](./getting-started/agents.md)
 - [Quickstart](./getting-started/quickstart.md)
 - [Your first scan](./getting-started/first-scan.md)
 

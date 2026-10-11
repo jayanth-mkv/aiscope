@@ -1,0 +1,12 @@
+{
+  "name": "aiscope",
+  "version": "0.1.1",
+  "description": "Audit conflicting AI coding instructions with AIScope's native CLI.",
+  "author": {
+    "name": "Xplormity Collective"
+  },
+  "homepage": "https://github.com/Jayanth-MKV/aiscope",
+  "repository": "https://github.com/Jayanth-MKV/aiscope",
+  "license": "MIT",
+  "skills": "./skills/"
+}

@@ -19,12 +19,54 @@
 <p align="center">
   <a href="#what-is-aiscope">What is AIScope?</a> ·
   <a href="#documentation">Documentation</a> ·
-  <a href="#quick-start">Quick start</a> ·
+  <a href="#set-up-with-your-agent">Agent setup</a> ·
   <a href="#features">Features</a> ·
   <a href="#architecture">Architecture</a> ·
   <a href="#privacy--safety">Privacy</a> ·
   <a href="#install">Install</a>
 </p>
+
+## Set up with your agent
+
+Copy this prompt into your coding agent:
+
+```text
+Set up AIScope for this project using https://github.com/Jayanth-MKV/aiscope.
+Read the README and skills/aiscope-setup/SKILL.md from that repository.
+Detect my OS and architecture, reuse an existing installation, or install
+a released binary after checking its SHA-256 checksum. Use Cargo if a
+matching binary is unavailable. Install the aiscope-setup and aiscope
+skills for the agent I am using, scoped to this project. Keep existing
+agent configuration. Verify the version, run a noninteractive JSON scan
+of this project, and explain any high-severity conflicts with file and
+line references. Leave instruction files unchanged unless I ask for fixes.
+```
+
+## Installation commands
+
+If Rust and Cargo are installed:
+
+```sh
+cargo install aiscope --version 0.1.1 --locked
+aiscope --version
+aiscope --specific --json .
+```
+
+Without Rust, use the [prebuilt release](https://github.com/Jayanth-MKV/aiscope/releases/latest) for your platform. See [installation](docs/src/getting-started/install.md) for checksum verification.
+
+Install both skills for Codex in the current project:
+
+```sh
+npx --yes skills add Jayanth-MKV/aiscope --skill aiscope-setup aiscope --agent codex --copy --yes
+```
+
+Replace `codex` with `claude-code`, `cursor`, `opencode`, or your [supported agent](https://github.com/vercel-labs/skills#supported-agents). Add `--global` only for installation across projects. Skills teach the agent how to use AIScope; the executable is installed separately. [Plugin and manual setup](docs/src/getting-started/agents.md).
+
+In Claude Code 2.1.275+, install the plugin and both skills in one step:
+
+```text
+/plugin install aiscope --marketplace Jayanth-MKV/aiscope --scope project
+```
 
 <p align="center">
   <img src="assets/readme-cover.svg" width="92%" alt="AIScope paperback cover: inspect what AI coding tools remember and where their instructions disagree">
@@ -181,7 +223,7 @@ Two rules with **non-overlapping** `applyTo` globs (e.g. `**/*.ts` vs `**/*.py`)
 cargo install aiscope            # 5 MB self-contained binary
 ```
 
-(Pre-built binaries shipping in v0.1.1 via GitHub Releases.)
+Prebuilt binaries are available through [GitHub Releases](https://github.com/Jayanth-MKV/aiscope/releases/latest). npm and PyPI launchers are planned; use the supported installation paths above today.
 
 ---
 
