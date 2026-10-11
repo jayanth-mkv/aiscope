@@ -231,3 +231,12 @@ jobs:
               env:
                   CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
               run: cargo publish --locked
+
+    agent-skills:
+      needs: [npm, pypi]
+      if: vars.PUBLISH_CLAWHUB == 'true'
+      permissions:
+        contents: read
+      uses: ./.github/workflows/publish-skills.yml
+      secrets:
+        CLAWHUB_TOKEN: ${{ secrets.CLAWHUB_TOKEN }}

@@ -330,6 +330,14 @@ Snapshots are pinned in `tests/snapshots/`. To accept intentional changes: `carg
 - v0.4 — hosted shareable snapshot URLs
 - v0.5 — cross-tool memory port (`aiscope port cursor → claude`)
 
+## Registries and agent discovery
+
+AIScope is published on [npm](https://www.npmjs.com/package/aiscope-cli), [PyPI](https://pypi.org/project/aiscope-cli/) and [crates.io](https://crates.io/crates/aiscope). Its Rust documentation is on [docs.rs](https://docs.rs/aiscope), and the crate is indexed by [lib.rs](https://lib.rs/crates/aiscope).
+
+The [AIScope](https://clawhub.ai/jayanth-mkv/skills/aiscope) and [setup](https://clawhub.ai/jayanth-mkv/skills/aiscope-setup) skills are published on ClawHub. GitHub installation commands appear above. ClawHub distributes its skill copies under MIT-0; this repository remains MIT licensed, with the font license described below.
+
+GitHub Actions previews skill changes on pushes to main. Releases publish changed skills when the `CLAWHUB_TOKEN` Actions secret and `PUBLISH_CLAWHUB=true` repository variable are configured. Manual runs of `publish-skills.yml` default to preview. The workflow checks the authenticated ClawHub owner against the source repository owner. AIScope is a CLI; it does not currently expose an MCP server.
+
 ## License
 
 MIT (aiscope source) · Apache-2.0 (embedded JetBrains Mono font)
